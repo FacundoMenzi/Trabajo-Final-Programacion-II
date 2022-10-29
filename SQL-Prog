@@ -1,0 +1,828 @@
+
+create database UTN_TECNICATURAS
+use UTN_TECNICATURAS
+
+create table Contactos(
+id_contacto int identity(1,1),
+email varchar(130),
+telefono varchar(25)
+
+constraint pk_contactos primary key (id_contacto)
+)
+
+create table Estados_Civiles(
+id_est_civil int identity(1,1),
+estado_civ varchar(60)
+
+constraint pk_estados_civ primary key (id_est_civil)
+)
+
+create table Sit_Habitacionales(
+id_habitacional int identity(1,1),
+descripcion varchar(60)
+constraint pk_sit_habitacional primary key (id_habitacional)
+)
+
+create table Sit_Laborales(
+id_laboral int identity(1,1),
+descripcion varchar(60)
+constraint pk_sit_laboral primary key (id_laboral)
+)
+
+create table Barrios(
+id_barrio int identity(1,1),
+barrio varchar(70)
+constraint pk_barrios primary key (id_barrio)
+)
+
+create table Personas(
+id_persona int identity(1,1),
+nombre varchar(100),
+apellido varchar(100),
+id_contacto int,
+fecha_nac date,
+id_est_civil int,
+id_habitacional int,
+id_barrio int
+
+constraint pk_persona primary key (id_persona),
+constraint fk_contactos foreign key (id_contacto) references Contactos (id_contacto),
+constraint fk_est_civiles foreign key (id_est_civil) references Estados_Civiles (id_est_civil),
+constraint fk_habitacionales foreign key (id_habitacional) references Sit_Habitacionales (id_habitacional),
+constraint fk_barrios foreign key (id_barrio) references Barrios (id_barrio)
+)
+
+create table Profesores (
+id_profesor int identity (1,1),
+id_persona int
+constraint pk_profesor primary key (id_profesor)
+constraint fk_profesor_persona foreign key (id_persona) references Personas (id_persona)
+
+)
+
+create table Alumnos(
+legajo int,
+id_persona int,
+id_laboral int
+constraint pk_alumno primary key (legajo),
+constraint fk_persona foreign key (id_persona) references Personas (id_persona),
+constraint fk_sit_laboral foreign key (id_laboral) references Sit_laborales (id_laboral)
+)
+
+create table Turnos(
+id_turno int identity(1,1),
+turno varchar(50),
+constraint pk_turno primary key (id_turno)
+)
+
+create table Estado_Materias(
+id_Estado int identity(1,1),
+estado varchar(60)
+constraint pk_estadoMateria primary key (id_estado)
+)
+
+
+create table Materias(
+id_materia int identity(1,1),
+nombre varchar(80),
+id_profesor int,
+id_turno int
+constraint pk_materia primary key (id_materia),
+constraint fk_profesor foreign key (id_profesor) references Profesores (id_profesor),
+constraint fk_turno foreign key (id_turno) references Turnos (id_turno)
+)
+
+
+create table Materias_Alumnos(
+id_materia int,
+legajo int,
+id_estado int
+constraint pk_matAlu primary key (id_materia,legajo),
+constraint fk_estado foreign key (id_estado) references Estado_Materias (id_estado),
+constraint fk_alumno foreign key (legajo) references Alumnos (legajo),
+constraint fk_id_materia foreign key (id_materia) references Materias (id_materia)
+)
+create table Tecnicaturas(
+id_Tecnicatura int identity(1,1),
+nombre varchar(100),
+titulo varchar(100)
+constraint pk_tecnicatura primary key (id_tecnicatura)
+)
+create table Detalle_Tecnicaturas(
+id_detalle_tec int identity(1,1),
+id_tecnicatura int,
+id_materia int,
+cuatrimestre tinyint,
+anio_cursado smallint
+
+constraint pk_detalleTec primary key (id_detalle_Tec),
+constraint fk_materia foreign key (id_materia) references Materias (id_materia),
+constraint fk_tecnicatura foreign key (id_tecnicatura) references Tecnicaturas (id_tecnicatura)
+
+)
+
+create table Tecnicaturas_Alumnos(
+id_tecnicatura int,
+legajo int,
+id_turno int
+constraint pk_tecAlu primary key (id_tecnicatura,legajo),
+constraint fk_tecAlu_turno foreign key (id_turno) references Turnos (id_turno),
+constraint fk_tecAlu_alumno foreign key (legajo) references Alumnos (legajo),
+constraint fk_tecAlu_idtec foreign key (id_tecnicatura) references Tecnicaturas (id_tecnicatura)
+)
+
+create table Tipos_Examenes(
+id_tipo_examen tinyint identity(1,1),
+tipo varchar(60),
+
+constraint pk_tipo_Examen primary key (id_tipo_examen)
+)
+
+create table Examenes(
+id_examen int identity(1,1),
+descripcion varchar(110),
+id_materia int,
+id_profesor int,
+fecha date,
+id_tipo_examen tinyint
+constraint pk_examen primary key (id_examen),
+constraint fk_examen_materia foreign key (id_materia) references Materias (id_materia),
+constraint fk_examen_profesor foreign key (id_profesor) references Profesores (id_profesor),
+constraint fk_tipo_examen foreign key (id_tipo_examen) references Tipos_Examenes (id_tipo_examen)
+)
+
+create table Detalle_Examenes(
+id_detalle int identity(1,1),
+id_examen int,
+legajo int,
+nota int
+constraint fk_detalle_Examen primary key (id_detalle),
+constraint fk_examen foreign key (id_examen) references Examenes (id_examen),
+constraint fk_detEx_legajo foreign key (legajo) references Alumnos (legajo)
+)
+
+--Tabla Contactos 
+insert into Contactos values ('cande2@gmail.com', '3516367311')
+insert into Contactos values ('tomi112@gmail.com', '3516345787')
+insert into Contactos values ('tomas78@gmail.com', '3513589477')
+insert into Contactos values ('facu@gmail.com', '3514695311')
+insert into Contactos values ('kunda@gmail.com', '3518965744')
+insert into Contactos values ('botta@gmail.com', '3517589644')
+insert into Contactos values ('santoro@gmail.com', '3511245988')
+insert into Contactos values ('Olmedo@gmail.com', '3512563587')
+insert into Contactos values ('sergio@gmail.com', '3513696855')
+insert into Contactos values ('walter@gmail.com', '3517896521')
+insert into Contactos values ('estefanich74@gmail.com', '3518695744')
+insert into Contactos values ('pedrojose@gmail.com', '3515464232')
+insert into Contactos values ('catalina@gmail.com', '3516567867')
+insert into Contactos values ('marissapo@gmail.com', '3517648976')
+insert into Contactos values ('Pollioto@gmail.com', '3517659870')
+insert into Contactos values ('Roger@gmail.com', '3516785436')
+insert into Contactos values ('Arietti@gmail.com', '3517895678')
+insert into Contactos values ('Florencia@gmail.com', '3515768987')
+insert into Contactos values ('Freudenreich@gmail.com', '3513456787')
+
+insert into Contactos values ('Gonzalez@gmail.com', '3514567680')
+insert into Contactos values ('Juan@gmail.com', '3514657364')
+insert into Contactos values ('carlos@gmail.com', '3517876567')
+insert into Contactos values ('alberto@gmail.com', '35134526377')
+insert into Contactos values ('lopez@gmail.com', '3518787878')
+insert into Contactos values ('martinez@gmail.com', '35190987656')
+insert into Contactos values ('sofia@gmail.com', '35176789098')
+insert into Contactos values ('maria@gmail.com', '3513456546')
+insert into Contactos values ('lucia@gmail.com', '3517678987')
+insert into Contactos values ('martina@gmail.com', '3519890987')
+insert into Contactos values ('catalina@gmail.com', '3511234256')
+insert into Contactos values ('elena@gmail.com', '3516790562')
+--
+ insert into Contactos values  ( 'pepe@gmail.com' , 3567898767)
+ insert into Contactos values  ( 'elnico@gmail.com' , 3514758987)
+ insert into Contactos values  ( 'marceloquin@gmail.com' , 3564789876)
+ insert into Contactos values  ( 'juanalberto@gmail.com' , 3524352345)
+ insert into Contactos values  ( 'luquita@gmail.com' , 3512345678)
+ insert into Contactos values  ( 'federicoronca@gmail.com' , 3512358790)
+ insert into Contactos values  ( 'danielmilito@gmail.com' , 3513647098)
+ insert into Contactos values  ( 'marimolina@gmail.com' , 3512345543)
+ insert into Contactos values  ( 'eduardosalta@gmail.com' , 3512333456)
+ 
+ insert into Contactos values ('Lucaselol@gmail.com ' , 3515678777)
+ insert into Contactos values ('Memelinci@gmail.com ' , 3514545671)
+ insert into Contactos values ('Pablitoanadon@gmail.com ' , 3598789999)
+ select * from Contactos
+--Tabla Estados Civiles 
+insert into Estados_Civiles values ('Casado/a')
+insert into Estados_Civiles values ('Soltero/a')
+insert into Estados_Civiles values ('Viudo/a')
+insert into Estados_Civiles values ('Divorciado/a')
+
+--Tabla Situacion Habitacional 
+insert into Sit_Habitacionales values('Precariedad Grave')
+insert into Sit_Habitacionales values('Precariedad Moderada')
+insert into Sit_Habitacionales values('Sin Precariedad')
+
+--Situacion Laboral
+insert into Sit_Laborales values ('Desempleado')
+insert into Sit_Laborales values ('Empleado')
+
+--Tabla Barrios
+insert into Barrios values ('Alto Alberdi')
+insert into Barrios values ('Los Naranjos')
+insert into Barrios values ('Parque Capital')
+insert into Barrios values ('Cofico')
+insert into Barrios values ('Bella Vista')
+insert into Barrios values ('Paso de los Andes')
+insert into Barrios values ('Obrero')
+insert into Barrios values ('Smata')
+insert into Barrios values ('Jardin Espinosa')
+insert into Barrios values ('Las Palmas')
+insert into Barrios values ('Manantiales')
+set dateformat dmy
+--Tabla Personas
+insert into Personas values ('Candelaria', 'Mello',1,'04/08/2003',2, 3, 1)
+insert into Personas values ('Tomas', 'Ortega',2,'17/12/2003',2, 3, 11)
+insert into Personas values ('Beatriz', 'Kunda',5, '05/07/1975',1, 3, 9)
+insert into Personas values ('Pedro José', 'Crespo',12, '05/07/1975',1, 3, 9)
+insert into Personas values ('Oscar', 'Botta',6, '25/08/1977',1, 3, 4)
+insert into Personas values ('Ezequiel', 'Santoro',7, '04/09/1984',2, 3, 3)
+insert into Personas values ('Daniel', 'Olmedo',8, '15/11/1978',1, 3, 9)
+insert into Personas values ('Clarissa', 'Stefanich',11, '24/03/1970',1, 3, 2)
+insert into Personas values ('Walter', 'Pereyra',10, '11/05/1981',1, 3, 5)
+insert into Personas values ('Catalina', 'Murature',13, '15/12/1989',1, 3, 7)
+insert into Personas values ('Marisa', 'Possetto',14, '27/06/1973',1, 3, 5)
+insert into Personas values ('Graciela', 'Freudenreich',19, '15/12/1989',3, 3, 7)
+insert into Personas values ('Martin', 'Pollioto',15, '06/02/1986',2, 3, 1)
+insert into Personas values ('Roger', 'Martinez',16, '13/07/1987',2, 3, 5)
+insert into Personas values ('Adrian', 'Arietti',17, '06/08/1983',1, 3, 7)
+insert into Personas values ('Molla', 'Florencia',18, '18/09/1988',1, 3, 9)
+
+insert into Personas values ('González', 'Miguel ',20, '15/07/1999',2, 3, 5)
+insert into Personas values ('Rodríguez ', 'Juan',21, '12/09/2003',2, 3, 7)
+insert into Personas values ('Gómez', 'Carlos',22, '04/06/2001',2, 3, 3)
+insert into Personas values ('Fernández', 'Alberto',23, '18/11/2003',1, 3, 2)
+insert into Personas values ('López', 'José ',24, '06/06/2002',1, 3, 11)
+insert into Personas values ('Martínez', 'Luis',25, '17/07/2002',2, 3, 8)
+insert into Personas values ('Sánchez ', 'Sofía',26, '06/09/1999',2, 3, 9)
+insert into Personas values ('Romero ', 'María',27, '18/10/2002',2, 3, 7)
+insert into Personas values ('Sánchez ', 'Lucía',28, '06/12/2002',2, 3, 1)
+insert into Personas values ('González  ', 'Martina',29, '19/08/2003',1, 3, 2)
+insert into Personas values ('Recio ', 'Catalina',30, '06/09/2002',1, 3, 7)
+insert into Personas values ('Giambo ', 'Elena',31, '18/02/1999',2, 1, 10)
+--
+insert into personas values('pepe' , 'Suarez',32 , '1995/06/03' , 1 , 3, 4)
+ insert into personas values('Nicolas' , 'Rigoni',33 , '1990/05/10' , 1 , 2, 4)
+ insert into personas values('Marcelo' , 'Loquin',34 , '1992/11/13' , 1 , 2, 4)
+ insert into personas values('Juan' , 'Alberto',35 , '1991/07/25' , 1 , 1, 4)
+ insert into personas values('Lucas' , 'Fagandini',36 , '1995/08/22' , 1 , 1, 4)
+ insert into personas values('Federico' , 'Roncaglia',37 , '2000/12/15' , 1 , 3, 4)
+ insert into personas values('Daniel' , 'Molito',38 , '1989/01/06' , 1 , 2, 4)
+ insert into personas values('Mario' , 'Molina',39 , '1988/03/17' , 1 , 3, 4)
+ insert into personas values('Eduardo' , 'Salta',40 , '1995/09/30' , 1 , 2, 4)
+
+ insert into personas values('Lucas' , 'Parter',41 , '1990/05/10' , 1, 2, 5)
+ insert into personas values('Meme' , 'Linci',42 , '1990/05/10' , 2, 2, 8)
+ insert into personas values('Pablo' , 'Anadon',43, '1990/05/10' , 2 , 3, 3)
+select * from Personas
+--Tabla Profesores
+insert into Profesores values (3)
+insert into Profesores values (4)
+insert into Profesores values (5)
+insert into Profesores values (6)
+insert into Profesores values (7)
+insert into Profesores values (8)
+insert into Profesores values (9)
+insert into Profesores values (10)
+insert into Profesores values (11)
+insert into Profesores values (12)
+insert into Profesores values (13)
+insert into Profesores values (14)
+insert into Profesores values (15)
+insert into Profesores values (16)
+
+insert into Profesores values (39)
+insert into Profesores values (40)
+
+
+--Tabla Alumnos
+insert into Alumnos values ( 113905,1,2)
+insert into Alumnos values ( 114120,2,2)
+
+insert into Alumnos values ( 114123,17,2)
+insert into Alumnos values ( 114124,18,1)
+insert into Alumnos values ( 114125,19,1)
+insert into Alumnos values ( 114126,20,2)
+insert into Alumnos values ( 114127,21,1)
+insert into Alumnos values ( 114128,22,1)
+insert into Alumnos values ( 114118,23,2)
+insert into Alumnos values ( 114129,24,2)
+insert into Alumnos values ( 114111,25,1)
+insert into Alumnos values ( 114112,26,1)
+insert into Alumnos values ( 114113,27,1)
+insert into Alumnos values ( 114114,28,1)
+--NUEVOS
+ insert into Alumnos values (113458 , 30 , 2)
+ insert into Alumnos values (114565 , 31 , 1)
+ insert into Alumnos values (113444 , 32 , 2)
+ insert into Alumnos values (111111 , 33 , 1)
+ insert into Alumnos values (113456 , 34 , 1)
+ insert into Alumnos values (116677 , 35 , 2)
+ insert into Alumnos values (116789 , 36 , 2)
+ insert into Alumnos values (111234 , 37 , 1)
+ insert into Alumnos values (116432 , 38 , 2)
+
+ 
+ 
+ 
+--Tabla Turnos
+insert into Turnos values ('Mañana')
+insert into Turnos values ('Tarde')
+insert into Turnos values ('Noche')
+
+--Tabla Materias TURNO TARDE
+insert into Materias values ('Laboratorio en Computación I', 1, 2)
+insert into Materias values ('Laboratorio en Computación II', 1, 2)
+insert into Materias values ('Programacion II', 3, 2)
+insert into Materias values ('Programacion I', 3, 2)
+insert into Materias values ('Metodologia de la Investigacion', 7, 2)
+insert into Materias values ('Estadistica', 6, 2)
+insert into Materias values ('Matematica', 6, 2)
+insert into Materias values ('Ingles I', 8, 2)
+insert into Materias values ('Ingles II', 8, 2)
+insert into Materias values ('Arquitectura de Sistemas Operativos', 5, 2)
+insert into Materias values ('Sistema de Procesamiento de Datos', 5, 2)
+--TURNO NOCHE
+insert into Materias values ('Laboratorio en Computación I', 2, 3)
+insert into Materias values ('Laboratorio en Computación II', 4, 3)
+insert into Materias values ('Programacion II', 12, 3)
+insert into Materias values ('Programacion I', 13, 3)
+insert into Materias values ('Metodologia de la Investigacion', 7, 3)
+insert into Materias values ('Estadistica', 9, 3)
+insert into Materias values ('Matematica', 9, 3)
+insert into Materias values ('Ingles I', 14, 3)
+insert into Materias values ('Ingles II', 14, 3)
+insert into Materias values ('Arquitectura de Sistemas Operativos', 5, 3)
+insert into Materias values ('Sistema de Procesamiento de Datos', 5, 3)
+--NUEVO TARDE/NOCHE
+insert into Materias values ('Alimentos I',15 , 2)
+insert into Materias values ('Alimentos I', 15, 3)
+insert into Materias values ('Fisica I',16 , 2)
+insert into Materias values ('Fisica I', 16, 3)
+insert into Materias values ('Arquitectura de las cosas I',15 , 2)
+insert into Materias values ('Arquitectura de las cosas I', 15, 3)
+insert into Materias values ('Comunicacion I',16 , 2)
+insert into Materias values ('Comunicacion I', 16, 3)
+
+
+--Tabla Estado Materias
+insert into Estado_Materias values ('Promocionado')
+insert into Estado_Materias values ('Regular')
+insert into Estado_Materias values ('Libre')
+insert into Estado_Materias values ('Aprobado')
+
+--Tabla Materias_Alumnos
+insert into Materias_Alumnos values (1,113905,1)
+insert into Materias_Alumnos values (2,113905,1)
+insert into Materias_Alumnos values (4,113905,2)
+insert into Materias_Alumnos values (3,113905,4)
+insert into Materias_Alumnos values (5,113905,1)
+insert into Materias_Alumnos values (6,113905,1)
+insert into Materias_Alumnos values (7,113905,1)
+insert into Materias_Alumnos values (8,113905,1)
+insert into Materias_Alumnos values (9,113905,4)
+insert into Materias_Alumnos values (10,113905,1)
+insert into Materias_Alumnos values (11,113905,1)
+
+insert into Materias_Alumnos values (1,114120,2)
+insert into Materias_Alumnos values (2,114120,1)
+insert into Materias_Alumnos values (4,114120,3)
+insert into Materias_Alumnos values (3,114120,4)
+insert into Materias_Alumnos values (5,114120,1)
+insert into Materias_Alumnos values (6,114120,2)
+insert into Materias_Alumnos values (7,114120,2)
+insert into Materias_Alumnos values (8,114120,1)
+insert into Materias_Alumnos values (9,114120,4)
+insert into Materias_Alumnos values (10,114120,4)
+insert into Materias_Alumnos values (11,114120,4)
+
+insert into Materias_Alumnos values (1,114129,2)
+insert into Materias_Alumnos values (2,114129,3)
+insert into Materias_Alumnos values (4,114129,3)
+insert into Materias_Alumnos values (3,114129,4)
+insert into Materias_Alumnos values (5,114129,3)
+insert into Materias_Alumnos values (6,114129,3)
+insert into Materias_Alumnos values (7,114129,2)
+insert into Materias_Alumnos values (8,114129,1)
+insert into Materias_Alumnos values (9,114129,3)
+insert into Materias_Alumnos values (10,114129,3)
+insert into Materias_Alumnos values (11,114129,3)
+--
+insert into Materias_Alumnos values (12,113458,4)
+
+insert into Materias_Alumnos values (14,113444,4)
+insert into Materias_Alumnos values (12, 114565,3)
+
+INSERT INTO Materias_Alumnos values (23, 114565,1)
+INSERT INTO Materias_Alumnos values (25, 114565,1)
+INSERT INTO Materias_Alumnos values (27, 114565,3)
+INSERT INTO Materias_Alumnos values (29, 114565,2)
+
+
+INSERT INTO Materias_Alumnos values (23, 114113,1)
+INSERT INTO Materias_Alumnos values (25, 114113,1)
+INSERT INTO Materias_Alumnos values (27, 114113,3)
+INSERT INTO Materias_Alumnos values (29, 114113,2)
+
+INSERT INTO Materias_Alumnos values (23, 113444,1)
+INSERT INTO Materias_Alumnos values (25, 113444,1)
+INSERT INTO Materias_Alumnos values (27, 113444,3)
+INSERT INTO Materias_Alumnos values (29, 113444,2)
+
+INSERT INTO Materias_Alumnos values (23, 116677,1)
+INSERT INTO Materias_Alumnos values (25, 116677,1)
+INSERT INTO Materias_Alumnos values (27, 116677,3)
+INSERT INTO Materias_Alumnos values (29, 116677,2)
+
+INSERT INTO Materias_Alumnos values (23, 111234,1)
+INSERT INTO Materias_Alumnos values (25, 111234,1)
+INSERT INTO Materias_Alumnos values (27, 111234,3)
+INSERT INTO Materias_Alumnos values (29, 111234,2)
+
+
+--Tabla Tecnicaturas
+insert into Tecnicaturas values ('Programación', 'Técnico Universitario en Programación')
+insert into Tecnicaturas values ('Industrias Alimentarias', 'Tecnico Universitario en Industrias Alimentarias')
+insert into Tecnicaturas values ('Mecatrónica', 'Tecnico Universitario en Mecatrónica')
+insert into Tecnicaturas values ('Mantenimiento Industrial', 'Tecnico Universitario en Mantenimiento Industrial')
+insert into Tecnicaturas values ('Telecomunicaciones', 'Tecnico Universitario en Telecomunicaciones')
+--Tecnicaturas Alumnos
+/*
+ select * from Tecnicaturas_Alumnos
+ insert into Tecnicaturas_Alumnos values( 2 , 113458 , 1)
+ insert into Tecnicaturas_Alumnos values( 2 , 114565 , 2)
+ insert into Tecnicaturas_Alumnos values( 3 , 113444 , 3)
+ insert into Tecnicaturas_Alumnos values( 3 , 111111 , 3)
+ insert into Tecnicaturas_Alumnos values( 4 , 113456 , 2)
+ insert into Tecnicaturas_Alumnos values( 4 , 116677 , 2)
+ insert into Tecnicaturas_Alumnos values( 5 , 116789 , 1)
+ insert into Tecnicaturas_Alumnos values( 5 , 111234 , 1)
+ insert into Tecnicaturas_Alumnos values( 3 , 116432 , 2)
+ */
+ 
+--Tabla Detalle_Tecnicatura
+insert into Detalle_Tecnicaturas values (1, 1, 1, 1)
+insert into Detalle_Tecnicaturas values (1, 2, 2, 1)
+insert into Detalle_Tecnicaturas values (1, 3, 2, 1)
+insert into Detalle_Tecnicaturas values (1, 4, 1, 1)
+insert into Detalle_Tecnicaturas values (1, 5, 2, 1)
+insert into Detalle_Tecnicaturas values (1, 6, 2, 1)
+insert into Detalle_Tecnicaturas values (1, 7, 1, 1)
+insert into Detalle_Tecnicaturas values (1, 8, 1, 1)
+insert into Detalle_Tecnicaturas values (1, 9, 2, 1)
+insert into Detalle_Tecnicaturas values (1, 10, 2, 1)
+Insert into Detalle_Tecnicaturas values (1, 11, 1, 1)
+
+insert into Detalle_Tecnicaturas values (1, 12, 1, 1)
+insert into Detalle_Tecnicaturas values (1, 13, 2, 1)
+insert into Detalle_Tecnicaturas values (1, 14, 2, 1)
+insert into Detalle_Tecnicaturas values (1, 15, 1, 1)
+insert into Detalle_Tecnicaturas values (1, 16, 2, 1)
+insert into Detalle_Tecnicaturas values (1, 17, 2, 1)
+insert into Detalle_Tecnicaturas values (1, 18, 1, 1)
+insert into Detalle_Tecnicaturas values (1, 19, 1, 1)
+insert into Detalle_Tecnicaturas values (1, 20, 2, 1)
+insert into Detalle_Tecnicaturas values (1, 21, 2, 1)
+Insert into Detalle_Tecnicaturas values (1, 22, 1, 1)
+--/////////////////////////////////////////////////////////
+insert into Detalle_Tecnicaturas values (2,23 , 1, 1)
+insert into Detalle_Tecnicaturas values (2,23 , 2, 1)
+insert into Detalle_Tecnicaturas values (2,29 , 1, 1)
+insert into Detalle_Tecnicaturas values (2,19 , 2, 1)
+
+insert into Detalle_Tecnicaturas values (3, 25, 1, 1)
+insert into Detalle_Tecnicaturas values (3, 25, 2, 1)
+insert into Detalle_Tecnicaturas values (3, 18, 1, 1)
+insert into Detalle_Tecnicaturas values (3, 18, 2, 1)
+insert into Detalle_Tecnicaturas values (3, 27, 1, 1)
+insert into Detalle_Tecnicaturas values (3, 27, 2, 1)
+
+insert into Detalle_Tecnicaturas values (4,25, 1, 1)
+insert into Detalle_Tecnicaturas values (4,25, 2, 1)
+insert into Detalle_Tecnicaturas values (4, 27, 2, 1)
+insert into Detalle_Tecnicaturas values (4, 27, 2, 1)
+
+insert into Detalle_Tecnicaturas values (5,29, 1, 1)
+insert into Detalle_Tecnicaturas values (5,29, 2, 1)
+insert into Detalle_Tecnicaturas values (5,29, 1, 2)
+insert into Detalle_Tecnicaturas values (5,19, 1, 1)
+insert into Detalle_Tecnicaturas values (5,20, 2, 1)
+insert into Detalle_Tecnicaturas values (5,5, 2, 2)
+
+--Tabla Tipos Examenes
+insert into Tipos_Examenes values ('Parcial')
+insert into Tipos_Examenes values ('Final')
+insert into Tipos_Examenes values ('Recuperatorio')
+
+
+--Tabla Examenes 
+--lab
+insert into Examenes values ('Unidad 1 y 2', 1, 1, '06/04/2022', 1) 
+insert into Examenes values ('Unidad 3 y 4', 1, 1, '16/06/2022', 1) 
+insert into Examenes values ('Integrador', 1, 1, '20/07/2022', 2) 
+insert into Examenes values ('Recuperatorio Integrador',1,1,'16/07/2022',3)
+
+insert into Examenes values ('Unidad 1 y 2', 2, 1, '22/09/2022', 1) 
+insert into Examenes values ('Unidad 3 y 4', 2, 1, '27/10/2022', 1) 
+insert into Examenes values ('Integrador', 2, 1, '24/11/2022', 2)
+insert into Examenes values ('Recuperatorio Integrador',2,1,'19/11/2022',3)
+
+--prog
+insert into Examenes values ('Unidad 1 y 2', 4, 3, '08/04/2022', 1) 
+insert into Examenes values ('Unidad 3 y 4', 4, 3, '20/06/2022', 1) 
+insert into Examenes values ('Integrador', 4, 3, '24/07/2022', 2) 
+
+insert into Examenes values ('Unidad 1 y 2', 3, 11, '01/10/2022', 1) 
+insert into Examenes values ('Unidad 3 y 4', 3, 11, '29/10/2022', 1) 
+insert into Examenes values ('Integrador', 3, 11, '20/11/2022', 2) 
+
+--metodologia
+insert into Examenes values ('Unidad 1 y 2', 5, 7, '08/04/2022', 1) 
+insert into Examenes values ('Unidad 3 y 4', 5, 7, '20/06/2022', 1) 
+insert into Examenes values ('Integrador', 5, 7, '24/07/2022', 2) 
+
+--estadistica
+insert into Examenes values ('Unidad 1 y 2', 6, 6, '01/10/2022', 1) 
+insert into Examenes values ('Unidad 3 y 4', 6, 6, '29/10/2022', 1) 
+insert into Examenes values ('Integrador', 6, 6, '20/11/2022', 2)
+--mat
+insert into Examenes values ('Unidad 1 y 2', 7, 6, '01/10/2022', 1) 
+insert into Examenes values ('Unidad 3 y 4', 7, 6, '29/10/2022', 1) 
+insert into Examenes values ('Integrador', 7, 6, '20/11/2022', 2)
+--ingles 1
+insert into Examenes values ('Unidad 1 y 2', 8, 8, '01/10/2022', 1) 
+insert into Examenes values ('Unidad 3 y 4', 8, 8, '29/10/2022', 1) 
+insert into Examenes values ('Integrador', 8, 8, '20/11/2022', 2)
+--ingles 2
+insert into Examenes values ('Unidad 1 y 2', 9, 8, '01/10/2022', 1) 
+insert into Examenes values ('Unidad 3 y 4', 9, 8, '29/10/2022', 1) 
+insert into Examenes values ('Integrador', 9, 8, '20/11/2022', 2)
+--aso
+insert into Examenes values ('Unidad 1 y 2', 10, 5, '01/10/2022', 1) 
+insert into Examenes values ('Unidad 3 y 4', 10, 5, '29/10/2022', 1) 
+insert into Examenes values ('Integrador', 10, 5, '20/11/2022', 2)
+--spd
+insert into Examenes values ('Unidad 1 y 2', 11, 5, '01/10/2022', 1) 
+insert into Examenes values ('Unidad 3 y 4', 11, 5, '29/10/2022', 1) 
+insert into Examenes values ('Integrador', 11, 5, '20/11/2022', 2)
+--
+
+--ALIMENTOS I
+insert into Examenes values ('Unidad 1 y 2' , 23 , 15 ,'2022-04-06' ,1)
+ insert into Examenes values ('Unidad 3 y 4' , 23 , 15 ,'2022-06-20' ,1)
+ insert into Examenes values ('Integrador' , 23 , 15 ,'2022-07-21' ,2)
+ insert into Examenes values ('Recuperatorio' , 23 , 15 ,'2022-07-11' ,3) 
+
+ insert into Examenes values ('Unidad 1 y 2' , 24 , 15 ,'2022-04-06' ,1)
+ insert into Examenes values ('Unidad 3 y 4' , 24 , 15 ,'2022-06-20' ,1)
+ insert into Examenes values ('Integrador' , 24 , 15 ,'2022-07-21' ,2)
+ insert into Examenes values ('Recuperatorio' , 24 , 15 ,'2022-07-11' ,3) 
+ 
+ 
+ --fisica
+ insert into Examenes values ('Unidad 1 y 2' , 25, 16 ,'2022-04-12' ,1)
+ insert into Examenes values ('Unidad 3 y 4' , 25 , 16 ,'2022-06-22' ,1)
+ insert into Examenes values ('Integrador' , 25 , 16 ,'2022-07-17' ,2)
+ insert into Examenes values ('Recuperatorio' , 25 , 16 ,'2022-07-10' ,3)
+
+ insert into Examenes values ('Unidad 1 y 2' , 26, 16 ,'2022-04-12' ,1)
+ insert into Examenes values ('Unidad 3 y 4' , 26 , 16 ,'2022-06-22' ,1)
+ insert into Examenes values ('Integrador' , 26 , 16 ,'2022-07-17' ,2)
+ insert into Examenes values ('Recuperatorio' , 26 , 16 ,'2022-07-10' ,3)
+ --arq cosas
+ insert into Examenes values ('Unidad 1 y 2' , 27 , 15 ,'2022-04-04' ,1)
+ insert into Examenes values ('Unidad 3 y 4' , 27 , 15 ,'2022-06-09' ,1)
+ insert into Examenes values ('Integrador' , 27 , 15 ,'2022-07-30' ,2)
+ insert into Examenes values ('Recuperatorio' , 27 , 15 ,'2022-07-23' ,3)
+
+ insert into Examenes values ('Unidad 1 y 2' , 28 , 15 ,'2022-04-04' ,1)
+ insert into Examenes values ('Unidad 3 y 4' , 28 , 15 ,'2022-06-09' ,1)
+ insert into Examenes values ('Integrador' , 28 , 15 ,'2022-07-30' ,2)
+ insert into Examenes values ('Recuperatorio' , 28 , 15 ,'2022-07-23' ,3)
+ --comunicacion
+ insert into Examenes values ('Unidad 1 y 2' , 29 , 16 ,'2022-04-11' ,1)
+ insert into Examenes values ('Unidad 3 y 4' , 29 , 16 ,'2022-06-17' ,1)
+ insert into Examenes values ('Integrador' , 29 , 16 ,'2022-07-28' ,2)
+ insert into Examenes values ('Recuperartorio' , 29 , 16 ,'2022-07-21' ,3)
+
+  insert into Examenes values ('Unidad 1 y 2' , 30 , 16 ,'2022-04-11' ,1)
+ insert into Examenes values ('Unidad 3 y 4' , 30 , 16 ,'2022-06-17' ,1)
+ insert into Examenes values ('Integrador' , 30 , 16 ,'2022-07-28' ,2)
+ insert into Examenes values ('Recuperartorio' , 30 , 16 ,'2022-07-21' ,3)
+
+--
+----EXAMENES  2021
+--lab
+insert into Examenes values ('Unidad 1 y 2', 1, 1, '06/04/2021', 1) 
+insert into Examenes values ('Unidad 3 y 4', 1, 1, '16/06/2021', 1) 
+insert into Examenes values ('Integrador', 1, 1, '20/07/2021', 2) 
+insert into Examenes values ('Recuperatorio Integrador',1,1,'16/07/2021',3)
+
+insert into Examenes values ('Unidad 1 y 2', 2, 1, '22/09/2021', 1) 
+insert into Examenes values ('Unidad 3 y 4', 2, 1, '27/10/2021', 1) 
+insert into Examenes values ('Integrador', 2, 1, '24/11/2021', 2)
+insert into Examenes values ('Recuperatorio Integrador',2,1,'19/11/2021',3)
+
+--prog
+insert into Examenes values ('Unidad 1 y 2', 4, 3, '08/04/2021', 1) 
+insert into Examenes values ('Unidad 3 y 4', 4, 3, '20/06/2021', 1) 
+insert into Examenes values ('Integrador', 4, 3, '24/07/2021', 2) 
+
+insert into Examenes values ('Unidad 1 y 2', 3, 11, '01/10/2021', 1) 
+insert into Examenes values ('Unidad 3 y 4', 3, 11, '29/10/2021', 1) 
+insert into Examenes values ('Integrador', 3, 11, '20/11/2021', 2) 
+
+--mat
+insert into Examenes values ('Unidad 1 y 2', 7, 6, '01/10/2021', 1) 
+insert into Examenes values ('Unidad 3 y 4', 7, 6, '29/10/2021', 1) 
+insert into Examenes values ('Integrador', 7, 6, '20/11/2021', 2)
+--ingles 1
+insert into Examenes values ('Unidad 1 y 2', 8, 8, '01/10/2021', 1) 
+insert into Examenes values ('Unidad 3 y 4', 8, 8, '29/10/2021', 1) 
+insert into Examenes values ('Integrador', 8, 8, '20/11/2021', 2)
+--ingles 2
+insert into Examenes values ('Unidad 1 y 2', 9, 8, '01/10/2021', 1) 
+insert into Examenes values ('Unidad 3 y 4', 9, 8, '29/10/2021', 1) 
+insert into Examenes values ('Integrador', 9, 8, '20/11/2021', 2)
+--aso
+insert into Examenes values ('Unidad 1 y 2', 10, 5, '01/10/2021', 1) 
+insert into Examenes values ('Unidad 3 y 4', 10, 5, '29/10/2021', 1) 
+insert into Examenes values ('Integrador', 10, 5, '20/11/2021', 2)
+
+
+--Tabla Detalle_Examenes
+--lab 1
+insert into Detalle_Examenes values(1,113905, 9)
+insert into Detalle_Examenes values(2,113905, 8)
+
+insert into Detalle_Examenes values(1,114120, 7)
+insert into Detalle_Examenes values(2,114120, 6)
+insert into Detalle_Examenes values(3,114120, 7)
+
+
+insert into Detalle_Examenes values(1,114123, 10)
+insert into Detalle_Examenes values(2,114123, 9)
+
+insert into Detalle_Examenes values(1,114124, 6)
+insert into Detalle_Examenes values(2,114124, 2)
+insert into Detalle_Examenes values(3,114124, 6)
+insert into Detalle_Examenes values(4,114124, 8)
+--prog 1
+insert into Detalle_Examenes values(9,113905, 9)
+insert into Detalle_Examenes values(10,113905, 8)
+
+insert into Detalle_Examenes values(9,114120, 7)
+insert into Detalle_Examenes values(10,114120, 6)
+insert into Detalle_Examenes values(11,114120, 7)
+
+
+insert into Detalle_Examenes values(9,114123, 10)
+insert into Detalle_Examenes values(10,114123, 9)
+
+insert into Detalle_Examenes values(9,114124, 6)
+insert into Detalle_Examenes values(10,114124, 2)
+
+--lab 2
+insert into Detalle_Examenes values(5,113905, 8)
+insert into Detalle_Examenes values(6,113905, 8)
+
+insert into Detalle_Examenes values(5,114120, 6)
+insert into Detalle_Examenes values(6,114120, 6)
+insert into Detalle_Examenes values(7,114120, 8)
+
+
+insert into Detalle_Examenes values(5,114123, 8)
+insert into Detalle_Examenes values(6,114123, 8)
+
+insert into Detalle_Examenes values(5,114124, 2)
+insert into Detalle_Examenes values(6,114124, 2)
+insert into Detalle_Examenes values(7,114124, 6)
+insert into Detalle_Examenes values(8,114124, 6)
+
+--nuevas materias
+insert into Detalle_Examenes values(36,113458, 7)
+insert into Detalle_Examenes values(37,113458, 6)
+insert into Detalle_Examenes values(38,113458, 8)
+
+insert into Detalle_Examenes values(44,113444, 6)
+insert into Detalle_Examenes values(45,113444, 6)
+insert into Detalle_Examenes values(46,113444, 8)
+
+insert into Detalle_Examenes values(52,114565, 2)
+insert into Detalle_Examenes values(53,114565, 2)
+
+insert into Detalle_Examenes values(60,114565, 2)
+insert into Detalle_Examenes values(61,114565, 6)
+insert into Detalle_Examenes values(63,114565, 6)
+insert into Detalle_Examenes values(62,114565, 9)
+
+
+
+insert into Detalle_Examenes values(36,113444, 10)
+insert into Detalle_Examenes values(37,113444, 9)
+
+
+insert into Detalle_Examenes values(44,113444, 6)
+insert into Detalle_Examenes values(45,113444, 6)
+insert into Detalle_Examenes values(46,113444, 8)
+
+insert into Detalle_Examenes values(52,113444, 8)
+insert into Detalle_Examenes values(53,113444, 8)
+
+insert into Detalle_Examenes values(60,113444, 6)
+insert into Detalle_Examenes values(61,113444, 2)
+insert into Detalle_Examenes values(63,113444, 10)
+insert into Detalle_Examenes values(62,113444, 9)
+
+--NUEVO 2021
+insert into Detalle_Examenes values(68,113905, 9)
+insert into Detalle_Examenes values(69,113905, 7)
+insert into Detalle_Examenes values(70,113905, 8)
+
+insert into Detalle_Examenes values(76,114120, 7)
+insert into Detalle_Examenes values(77,114120, 6)
+insert into Detalle_Examenes values(78,114120, 7)
+
+insert into Detalle_Examenes values(79,114120, 8)
+insert into Detalle_Examenes values(80,114120, 8)
+insert into Detalle_Examenes values(81,114120, 10)
+
+insert into Detalle_Examenes values(82,114120, 7)
+insert into Detalle_Examenes values(83,114120, 9)
+insert into Detalle_Examenes values(84,114120, 7)
+
+------------------------------------------------------------ PROCEDIMIENTOS ALMACENADOS ------------------------------------------------------------------
+create proc SP_UTNVER_MATERIAS
+as
+SELECT id_materia,nombre FROM Materias
+
+create proc SP_UTN_PROXIMO
+@next int output
+as
+select @next=max(id_tecnicatura)+1 from Tecnicaturas
+
+CREATE procedure [dbo].[SP_UTN_VER_TECNICATURAS_BAJAS]
+as 
+select * from tecnicaturas where estado=0
+
+create procedure [dbo].[SP_UTN_VER_TECNICATURAS]
+as 
+select * from tecnicaturas where estado=1
+
+create procedure [dbo].[SP_UTN_VER_DETALLES]
+@idTecnicatura_ int
+as 
+select id_detalle_tec, id_tecnicatura, d.id_materia, m.nombre, cuatrimestre, anio_cursado 
+from detalle_tecnicaturas d join Materias m on d.id_materia=m.id_materia
+where id_tecnicatura=@idTecnicatura_
+
+create procedure [dbo].[SP_UTN_MODIFICAR]
+@idTecnicatura_ int,
+@nombre varchar(60), 
+@titulo varchar(60)
+as
+delete from Detalle_Tecnicaturas where id_tecnicatura=@idTecnicatura_
+update Tecnicaturas set nombre=@nombre, titulo=@titulo where id_tecnicatura=@idTecnicatura_
+
+create PROCEDURE [dbo].[SP_UTN_INSERTAR_MAESTRO] 
+	@nombre varchar(60),
+	@titulo varchar(60),
+	@estado int,
+	@id_tecnicatura int OUTPUT
+AS
+BEGIN
+	INSERT INTO Tecnicaturas(nombre,titulo,estado)
+    VALUES (@nombre,@titulo,1);
+    --Asignamos el valor del último ID autogenerado (obtenido --  
+    --mediante la función SCOPE_IDENTITY() de SQLServer)	
+    SET @id_tecnicatura = SCOPE_IDENTITY();
+
+END
+
+create PROCEDURE [dbo].[SP_INSERTAR_UTN_DETALLE] 
+	
+	@id_tecnicatura int, 
+	@id_materia int,
+	@cuatrimestre int,
+	@anio int
+AS
+BEGIN
+	INSERT INTO Detalle_Tecnicaturas(id_tecnicatura,id_materia,cuatrimestre,anio_cursado)
+    VALUES (@id_tecnicatura,@id_materia,@cuatrimestre,@anio);
+  
+END
+
+create procedure [dbo].[SP_UTN_ALTA_BAJA]
+@idTecnicatura_ int,
+@estado int=1
+as 
+update Tecnicaturas 
+set estado=@estado
+where @idTecnicatura_=id_Tecnicatura
