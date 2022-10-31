@@ -16,6 +16,10 @@ namespace TpProgramacion
         public FrmPrincipal()
         {
             InitializeComponent();
+            lblReloj.Text = DateTime.Now.ToLongTimeString();
+            timer1.Start();
+           
+            
         }
 
         private void carreraToolStripMenuItem_Click(object sender, EventArgs e)
@@ -57,6 +61,11 @@ namespace TpProgramacion
         {
             FrmConsultarTecnicaturas frmNuevaTec = new FrmConsultarTecnicaturas();
             frmNuevaTec.ShowDialog();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblReloj.Text = DateTime.Now.ToLongTimeString();
         }
     }
 }

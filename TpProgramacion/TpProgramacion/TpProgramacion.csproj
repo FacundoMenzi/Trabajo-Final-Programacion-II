@@ -60,6 +60,12 @@
     <Compile Include="Presentacion\FrmConsultarTecnicaturas.designer.cs">
       <DependentUpon>FrmConsultarTecnicaturas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +92,9 @@
     <Compile Include="Servicios\Interfaces\IServicio.cs" />
     <EmbeddedResource Include="Presentacion\FrmConsultarTecnicaturas.resx">
       <DependentUpon>FrmConsultarTecnicaturas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
@@ -120,6 +129,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Imagenes\contraseña.png" />
+    <Content Include="Imagenes\ojo_abierto.png" />
+    <Content Include="Imagenes\ojo_cerrado.png" />
+    <Content Include="Imagenes\usuario.png" />
+    <Content Include="Imagenes\utn.png" />
     <Content Include="Imagenes\utnIcon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -50,29 +50,31 @@
             // lstTecBajas
             // 
             this.lstTecBajas.FormattingEnabled = true;
-            this.lstTecBajas.ItemHeight = 16;
-            this.lstTecBajas.Location = new System.Drawing.Point(35, 69);
+            this.lstTecBajas.Location = new System.Drawing.Point(26, 56);
+            this.lstTecBajas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lstTecBajas.Name = "lstTecBajas";
-            this.lstTecBajas.Size = new System.Drawing.Size(205, 308);
+            this.lstTecBajas.Size = new System.Drawing.Size(155, 251);
             this.lstTecBajas.TabIndex = 0;
             this.lstTecBajas.SelectedIndexChanged += new System.EventHandler(this.lstTecBajas_SelectedIndexChanged);
             // 
             // lblTecnicaturas
             // 
             this.lblTecnicaturas.AutoSize = true;
-            this.lblTecnicaturas.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTecnicaturas.Location = new System.Drawing.Point(30, 13);
+            this.lblTecnicaturas.Font = new System.Drawing.Font("Myanmar Text", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTecnicaturas.Location = new System.Drawing.Point(22, 11);
+            this.lblTecnicaturas.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTecnicaturas.Name = "lblTecnicaturas";
-            this.lblTecnicaturas.Size = new System.Drawing.Size(260, 26);
+            this.lblTecnicaturas.Size = new System.Drawing.Size(197, 30);
             this.lblTecnicaturas.TabIndex = 1;
             this.lblTecnicaturas.Text = "Tecnicaturas anteriores";
             // 
             // btnAlta
             // 
             this.btnAlta.Enabled = false;
-            this.btnAlta.Location = new System.Drawing.Point(35, 395);
+            this.btnAlta.Location = new System.Drawing.Point(26, 321);
+            this.btnAlta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAlta.Name = "btnAlta";
-            this.btnAlta.Size = new System.Drawing.Size(96, 40);
+            this.btnAlta.Size = new System.Drawing.Size(72, 32);
             this.btnAlta.TabIndex = 2;
             this.btnAlta.Text = "Dar Alta";
             this.btnAlta.UseVisualStyleBackColor = true;
@@ -81,9 +83,10 @@
             // btnCancelar
             // 
             this.btnCancelar.Enabled = false;
-            this.btnCancelar.Location = new System.Drawing.Point(153, 395);
+            this.btnCancelar.Location = new System.Drawing.Point(115, 321);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(88, 40);
+            this.btnCancelar.Size = new System.Drawing.Size(66, 32);
             this.btnCancelar.TabIndex = 3;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -100,12 +103,13 @@
             this.ClmCuatrimestre,
             this.ClmAnio});
             this.dgvMaterias.Enabled = false;
-            this.dgvMaterias.Location = new System.Drawing.Point(257, 203);
+            this.dgvMaterias.Location = new System.Drawing.Point(193, 165);
+            this.dgvMaterias.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvMaterias.Name = "dgvMaterias";
             this.dgvMaterias.ReadOnly = true;
             this.dgvMaterias.RowHeadersWidth = 51;
             this.dgvMaterias.RowTemplate.Height = 24;
-            this.dgvMaterias.Size = new System.Drawing.Size(504, 174);
+            this.dgvMaterias.Size = new System.Drawing.Size(378, 141);
             this.dgvMaterias.TabIndex = 4;
             // 
             // ClmID
@@ -143,9 +147,10 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(657, 395);
+            this.btnSalir.Location = new System.Drawing.Point(493, 321);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(104, 40);
+            this.btnSalir.Size = new System.Drawing.Size(78, 32);
             this.btnSalir.TabIndex = 5;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -154,51 +159,57 @@
             // lblMaterias
             // 
             this.lblMaterias.AutoSize = true;
-            this.lblMaterias.Location = new System.Drawing.Point(258, 173);
+            this.lblMaterias.Location = new System.Drawing.Point(194, 141);
+            this.lblMaterias.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMaterias.Name = "lblMaterias";
-            this.lblMaterias.Size = new System.Drawing.Size(62, 16);
+            this.lblMaterias.Size = new System.Drawing.Size(50, 13);
             this.lblMaterias.TabIndex = 6;
             this.lblMaterias.Text = "Materias:";
             // 
             // txtNombre
             // 
             this.txtNombre.Enabled = false;
-            this.txtNombre.Location = new System.Drawing.Point(326, 69);
+            this.txtNombre.Location = new System.Drawing.Point(244, 56);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(357, 22);
+            this.txtNombre.Size = new System.Drawing.Size(269, 20);
             this.txtNombre.TabIndex = 7;
             // 
             // txtTitulo
             // 
             this.txtTitulo.Enabled = false;
-            this.txtTitulo.Location = new System.Drawing.Point(326, 120);
+            this.txtTitulo.Location = new System.Drawing.Point(244, 98);
+            this.txtTitulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtTitulo.Name = "txtTitulo";
-            this.txtTitulo.Size = new System.Drawing.Size(357, 22);
+            this.txtTitulo.Size = new System.Drawing.Size(269, 20);
             this.txtTitulo.TabIndex = 8;
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(261, 72);
+            this.lblNombre.Location = new System.Drawing.Point(196, 58);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(59, 16);
+            this.lblNombre.Size = new System.Drawing.Size(47, 13);
             this.lblNombre.TabIndex = 9;
             this.lblNombre.Text = "Nombre:";
             // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Location = new System.Drawing.Point(277, 123);
+            this.lblTitulo.Location = new System.Drawing.Point(208, 100);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(43, 16);
+            this.lblTitulo.Size = new System.Drawing.Size(38, 13);
             this.lblTitulo.TabIndex = 10;
             this.lblTitulo.Text = "Título:";
             // 
             // FrmTecnicaturasBaja
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(799, 447);
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.ClientSize = new System.Drawing.Size(599, 363);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.txtTitulo);
@@ -211,6 +222,7 @@
             this.Controls.Add(this.lblTecnicaturas);
             this.Controls.Add(this.lstTecBajas);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "FrmTecnicaturasBaja";
             this.Text = "Tecnicaturas anteriores";
