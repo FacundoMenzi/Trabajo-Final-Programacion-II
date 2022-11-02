@@ -826,3 +826,40 @@ as
 update Tecnicaturas 
 set estado=@estado
 where @idTecnicatura_=id_Tecnicatura
+
+
+------------ver materias
+create proc SP_UTN_VER_MATERIAS
+as
+SELECT id_materia,nombre, id_profesor, id_turno FROM Materias
+
+--------proxima materia
+create proc SP_UTN_PROXIMA_MATERIA
+@next int output
+as
+select @next=max(id_materia)+1 from Materias
+
+------------insertar Materias
+create PROCEDURE [dbo].[SP_UTN_INSERTAR_MATERIA] 
+	@nombre varchar(60),
+	@id_profesor int,
+	@id_turno int,
+	@id_materia int OUTPUT
+AS
+BEGIN
+	INSERT INTO Materias(nombre,id_profesor,id_turno)
+    VALUES (@nombre,@id_profesor,@id_turno);
+    --Asignamos el valor del último ID autogenerado (obtenido --  
+    --mediante la función SCOPE_IDENTITY() de SQLServer)	
+    SET @id_materia = SCOPE_IDENTITY();
+
+END
+
+-----------modificar materias
+alter procedure [dbo].[SP_UTN_MODIFICAR_MATERIAS]
+@id_materia_ int,
+@nombre varchar(60), 
+@id_profesor int, 
+@id_turno int
+as
+update Materias set nombre=@nombre, id_profesor=@id_profesor, id_turno=@id_turno where id_materia=@id_materia_
