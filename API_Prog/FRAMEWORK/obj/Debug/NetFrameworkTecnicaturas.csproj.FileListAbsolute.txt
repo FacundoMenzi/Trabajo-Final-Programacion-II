@@ -1,0 +1,10 @@
+C:\Users\Tomi\Desktop\API\FRAMEWORK\bin\Debug\FRAMEWORK.exe.config
+C:\Users\Tomi\Desktop\API\FRAMEWORK\bin\Debug\FRAMEWORK.exe
+C:\Users\Tomi\Desktop\API\FRAMEWORK\bin\Debug\FRAMEWORK.pdb
+C:\Users\Tomi\Desktop\API\FRAMEWORK\obj\Debug\NetFrameworkTecnicaturas.csproj.AssemblyReference.cache
+C:\Users\Tomi\Desktop\API\FRAMEWORK\obj\Debug\NetFrameworkTecnicaturas.csproj.SuggestedBindingRedirects.cache
+C:\Users\Tomi\Desktop\API\FRAMEWORK\obj\Debug\FRAMEWORK.Properties.Resources.resources
+C:\Users\Tomi\Desktop\API\FRAMEWORK\obj\Debug\NetFrameworkTecnicaturas.csproj.GenerateResource.cache
+C:\Users\Tomi\Desktop\API\FRAMEWORK\obj\Debug\NetFrameworkTecnicaturas.csproj.CoreCompileInputs.cache
+C:\Users\Tomi\Desktop\API\FRAMEWORK\obj\Debug\FRAMEWORK.exe
+C:\Users\Tomi\Desktop\API\FRAMEWORK\obj\Debug\FRAMEWORK.pdb
