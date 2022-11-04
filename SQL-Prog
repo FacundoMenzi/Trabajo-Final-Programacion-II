@@ -863,7 +863,7 @@ BEGIN
 END
 
 -----------modificar materias
-alter procedure [dbo].[SP_UTN_MODIFICAR_MATERIAS]
+create procedure [dbo].[SP_UTN_MODIFICAR_MATERIAS]
 @id_materia_ int,
 @nombre varchar(60), 
 @id_profesor int, 
