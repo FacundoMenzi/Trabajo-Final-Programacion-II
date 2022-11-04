@@ -760,6 +760,16 @@ insert into Detalle_Examenes values(82,114120, 7)
 insert into Detalle_Examenes values(83,114120, 9)
 insert into Detalle_Examenes values(84,114120, 7)
 
+
+------------AGREGAR ESTADO
+
+alter table Tecnicaturas add  estado int
+update Tecnicaturas set estado=1
+
+-------------
+alter table Materias add  estado int
+update Materias set estado=1
+
 ------------------------------------------------------------ PROCEDIMIENTOS ALMACENADOS ------------------------------------------------------------------
 create proc SP_UTNVER_MATERIAS
 as
@@ -829,10 +839,7 @@ update Tecnicaturas
 set estado=@estado
 where @idTecnicatura_=id_Tecnicatura
 
-------------AGREGAR ESTADO
 
-alter table Materias add  estado int
-update Materias set estado=1
 
 ------------ver materias
 create proc SP_UTN_VER_MATERIAS
