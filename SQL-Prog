@@ -881,3 +881,15 @@ delete Examenes where id_materia=@id_materia
 delete Detalle_Tecnicaturas where id_materia=@id_materia
 delete Materias_Alumnos where id_materia=@id_materia
 delete Materias where id_materia=@id_materia
+
+-----------------
+alter table Materias
+(id_materia int identity(1,1),
+nombre varchar(80),
+id_profesor int,
+id_turno int,
+estado int=1
+constraint pk_materia primary key (id_materia),
+constraint fk_profesor foreign key (id_profesor) references Profesores (id_profesor),
+constraint fk_turno foreign key (id_turno) references Turnos (id_turno)
+)
