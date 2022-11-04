@@ -871,3 +871,13 @@ create procedure SP_OBTENER_PROFESORES
 as 
 select id_profesor, upper(pe.apellido) +', '+pe.nombre 'Profesor'
 from Profesores p join personas pe on pe.id_persona=p.id_persona
+
+-----------borrar Materia
+create procedure SP_UTN_BORRAR_MATERIAS
+@id_materia int 
+as
+delete Detalle_Tecnicaturas where id_materia=@id_materia
+delete Examenes where id_materia=@id_materia
+delete Detalle_Tecnicaturas where id_materia=@id_materia
+delete Materias_Alumnos where id_materia=@id_materia
+delete Materias where id_materia=@id_materia
