@@ -761,21 +761,27 @@ insert into Detalle_Examenes values(83,114120, 9)
 insert into Detalle_Examenes values(84,114120, 7)
 
 
-------------AGREGAR ESTADO
+------------AGREGAR ESTADO-----------------------
 
 alter table Tecnicaturas add  estado int
 update Tecnicaturas set estado=1
 
--------------
+-------------------------------------------------
 alter table Materias add  estado int
 update Materias set estado=1
 
 ------------------------------------------------------------ PROCEDIMIENTOS ALMACENADOS ------------------------------------------------------------------
-create proc SP_UTNVER_MATERIAS
+create proc [dbo].[SP_UTNVER_MATERIAS]
+@estado int =1
 as
-SELECT id_materia,nombre FROM Materias
+SELECT id_materia,m.nombre,m.id_profesor,m.id_turno,pa.nombre+','+upper(pa.apellido) 'profesor' ,t.turno turno
+FROM Materias m join Profesores p on p.id_profesor=m.id_profesor 
+	 join Personas pa on pa.id_persona=p.id_persona
+	 join Turnos T on t.id_turno=m.id_turno
+where estado=@estado
+order by nombre,turno
 
-create proc SP_UTN_PROXIMO
+CREATE proc [dbo].[SP_UTN_PROXIMA_TEC]
 @next int output
 as
 select @next=max(id_tecnicatura)+1 from Tecnicaturas
@@ -795,7 +801,7 @@ select id_detalle_tec, id_tecnicatura, d.id_materia, m.nombre, cuatrimestre, ani
 from detalle_tecnicaturas d join Materias m on d.id_materia=m.id_materia
 where id_tecnicatura=@idTecnicatura_
 
-create procedure [dbo].[SP_UTN_MODIFICAR]
+CREATE procedure [dbo].[SP_UTN_MODIFICAR_TEC]
 @idTecnicatura_ int,
 @nombre varchar(60), 
 @titulo varchar(60)
@@ -831,7 +837,7 @@ BEGIN
   
 END
 
-create procedure [dbo].[SP_UTN_ALTA_BAJA]
+CREATE procedure [dbo].[SP_UTN_ALTA_BAJA_TECNICATURA]
 @idTecnicatura_ int,
 @estado int=1
 as 
@@ -839,15 +845,8 @@ update Tecnicaturas
 set estado=@estado
 where @idTecnicatura_=id_Tecnicatura
 
-
-
-------------ver materias
-create proc SP_UTN_VER_MATERIAS
-as
-SELECT id_materia,nombre, id_profesor, id_turno, estado FROM Materias
-
---------proxima materia
-create proc SP_UTN_PROXIMA_MATERIA
+----------------------------------------------------------
+create proc [dbo].[SP_UTN_PROXIMA_MATERIA]
 @next int output
 as
 select @next=max(id_materia)+1 from Materias
@@ -857,15 +856,12 @@ create PROCEDURE [dbo].[SP_UTN_INSERTAR_MATERIA]
 	@nombre varchar(60),
 	@id_profesor int,
 	@id_turno int,
-	@estado int,
-	@id_materia int OUTPUT
-AS
+	@estado int
+
+	AS
 BEGIN
 	INSERT INTO Materias(nombre,id_profesor,id_turno,estado)
-    VALUES (@nombre,@id_profesor,@id_turno,@estado);
-    --Asignamos el valor del último ID autogenerado (obtenido --  
-    --mediante la función SCOPE_IDENTITY() de SQLServer)	
-    SET @id_materia = SCOPE_IDENTITY();
+    VALUES (@nombre,@id_profesor,@id_turno,@estado);	
 
 END
 
@@ -874,18 +870,17 @@ create procedure [dbo].[SP_UTN_MODIFICAR_MATERIAS]
 @id_materia_ int,
 @nombre varchar(60), 
 @id_profesor int, 
-@id_turno int, 
-@estado int
+@id_turno int
 as
-update Materias set nombre=@nombre, id_profesor=@id_profesor, id_turno=@id_turno, estado=@estado where id_materia=@id_materia_
+update Materias set nombre=@nombre, id_profesor=@id_profesor, id_turno=@id_turno where id_materia=@id_materia_
 
-----------combo profesores
-create procedure SP_OBTENER_PROFESORES
+
+create procedure [dbo].[SP_OBTENER_PROFESORES]
 as 
 select id_profesor, upper(pe.apellido) +', '+pe.nombre 'Profesor'
 from Profesores p join personas pe on pe.id_persona=p.id_persona
 
------------borrar Materia
+
 create procedure [dbo].[SP_UTN_ALTA_BAJA_MATERIAS]
 @id_materia int,
 @estado int=1
@@ -893,15 +888,6 @@ as
 update Materias
 set estado=@estado
 where @id_materia=id_materia
-
------
-CREATE procedure [dbo].[SP_UTN_VER_MATERIAS_BAJAS]
-as 
-select * from tecnicaturas where estado=0
-----------
-create procedure [dbo].[SP_UTN_VER_MATERIAS]
-as 
-select * from tecnicaturas where estado=1
 
 
 
