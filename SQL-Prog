@@ -797,8 +797,11 @@ select * from tecnicaturas where estado=1
 create procedure [dbo].[SP_UTN_VER_DETALLES]
 @idTecnicatura_ int
 as 
-select id_detalle_tec, id_tecnicatura, d.id_materia, m.nombre, cuatrimestre, anio_cursado 
+select id_detalle_tec, id_tecnicatura, d.id_materia,m.id_turno, m.nombre materia, cuatrimestre, anio_cursado,
+	   p.id_profesor,pa.nombre+','+upper(pa.apellido) 'profesor'
 from detalle_tecnicaturas d join Materias m on d.id_materia=m.id_materia
+	 join Profesores p on p.id_profesor=m.id_profesor 
+	 join Personas pa on pa.id_persona=p.id_persona
 where id_tecnicatura=@idTecnicatura_
 
 CREATE procedure [dbo].[SP_UTN_MODIFICAR_TEC]
