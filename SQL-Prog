@@ -892,5 +892,34 @@ update Materias
 set estado=@estado
 where @id_materia=id_materia
 
+Create proc SP_REPORTE_ALUMNOS
+@activo int=0,
+@apellido varchar(100),
+@promedio int=0
+as
+if (@activo = 1)
+begin
+select  a.legajo 'Legajo', p.apellido+', '+p.nombre 'Alumno', avg(de.nota) 'Promedio'
+from personas p join alumnos a on p.id_persona=a.id_persona join materias_alumnos ma on a.legajo=ma.legajo 
+join Materias m on m.id_materia=ma.id_materia join examenes e on m.id_materia=e.id_materia 
+join Detalle_Examenes de on de.id_examen=e.id_examen
+where p.apellido like @apellido+'%'
+group by a.legajo, p.apellido+', '+p.nombre
+having avg(de.nota) > @promedio
+end 
+else
+select  a.legajo 'Legajo', p.apellido+', '+p.nombre 'Alumno', avg(de.nota) 'Promedio'
+from personas p join alumnos a on p.id_persona=a.id_persona join materias_alumnos ma on a.legajo=ma.legajo 
+join Materias m on m.id_materia=ma.id_materia join examenes e on m.id_materia=e.id_materia 
+join Detalle_Examenes de on de.id_examen=e.id_examen
+where p.apellido like @apellido+'%'
+group by a.legajo, p.apellido+', '+p.nombre
 
 
+create proc SP_REPORTE_MATERIAS
+AS
+select m.nombre Materia , UPPER(pe.apellido)+','+pe.nombre as Profesor , t.turno
+from Materias m join Profesores p on m.id_profesor=p.id_profesor
+join Turnos t on m.id_turno=t.id_turno
+join Personas pe on pe.id_persona=p.id_persona
+where estado=1
