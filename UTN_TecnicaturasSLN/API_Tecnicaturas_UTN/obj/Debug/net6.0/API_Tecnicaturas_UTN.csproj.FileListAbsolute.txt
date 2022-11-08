@@ -1,0 +1,105 @@
+C:\Users\Tomi\Desktop\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\Tomi\Desktop\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\appsettings.json
+C:\Users\Tomi\Desktop\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\API_Tecnicaturas_UTN.exe
+C:\Users\Tomi\Desktop\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\API_Tecnicaturas_UTN.deps.json
+C:\Users\Tomi\Desktop\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\API_Tecnicaturas_UTN.runtimeconfig.json
+C:\Users\Tomi\Desktop\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\API_Tecnicaturas_UTN.dll
+C:\Users\Tomi\Desktop\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\API_Tecnicaturas_UTN.pdb
+C:\Users\Tomi\Desktop\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\Tomi\Desktop\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Tomi\Desktop\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Tomi\Desktop\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Tomi\Desktop\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\System.Data.SqlClient.dll
+C:\Users\Tomi\Desktop\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+C:\Users\Tomi\Desktop\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+C:\Users\Tomi\Desktop\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+C:\Users\Tomi\Desktop\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Tomi\Desktop\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Tomi\Desktop\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\DLL_API.dll
+C:\Users\Tomi\Desktop\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\DLL_API.pdb
+C:\Users\Tomi\Desktop\API\API_Tecnicaturas_UTN\obj\Debug\net6.0\API_Tecnicaturas_UTN.csproj.AssemblyReference.cache
+C:\Users\Tomi\Desktop\API\API_Tecnicaturas_UTN\obj\Debug\net6.0\API_Tecnicaturas_UTN.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tomi\Desktop\API\API_Tecnicaturas_UTN\obj\Debug\net6.0\API_Tecnicaturas_UTN.AssemblyInfoInputs.cache
+C:\Users\Tomi\Desktop\API\API_Tecnicaturas_UTN\obj\Debug\net6.0\API_Tecnicaturas_UTN.AssemblyInfo.cs
+C:\Users\Tomi\Desktop\API\API_Tecnicaturas_UTN\obj\Debug\net6.0\API_Tecnicaturas_UTN.csproj.CoreCompileInputs.cache
+C:\Users\Tomi\Desktop\API\API_Tecnicaturas_UTN\obj\Debug\net6.0\API_Tecnicaturas_UTN.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Tomi\Desktop\API\API_Tecnicaturas_UTN\obj\Debug\net6.0\API_Tecnicaturas_UTN.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Tomi\Desktop\API\API_Tecnicaturas_UTN\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\Tomi\Desktop\API\API_Tecnicaturas_UTN\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\Tomi\Desktop\API\API_Tecnicaturas_UTN\obj\Debug\net6.0\scopedcss\bundle\API_Tecnicaturas_UTN.styles.css
+C:\Users\Tomi\Desktop\API\API_Tecnicaturas_UTN\obj\Debug\net6.0\API_Tecnicaturas_UTN.csproj.CopyComplete
+C:\Users\Tomi\Desktop\API\API_Tecnicaturas_UTN\obj\Debug\net6.0\API_Tecnicaturas_UTN.dll
+C:\Users\Tomi\Desktop\API\API_Tecnicaturas_UTN\obj\Debug\net6.0\refint\API_Tecnicaturas_UTN.dll
+C:\Users\Tomi\Desktop\API\API_Tecnicaturas_UTN\obj\Debug\net6.0\API_Tecnicaturas_UTN.pdb
+C:\Users\Tomi\Desktop\API\API_Tecnicaturas_UTN\obj\Debug\net6.0\API_Tecnicaturas_UTN.genruntimeconfig.cache
+C:\Users\Tomi\Desktop\API\API_Tecnicaturas_UTN\obj\Debug\net6.0\ref\API_Tecnicaturas_UTN.dll
+D:\Mis cosas\PROGRAMACION\PROGRAMACION II\Trabajo Programacion\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\appsettings.Development.json
+D:\Mis cosas\PROGRAMACION\PROGRAMACION II\Trabajo Programacion\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\appsettings.json
+D:\Mis cosas\PROGRAMACION\PROGRAMACION II\Trabajo Programacion\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\API_Tecnicaturas_UTN.exe
+D:\Mis cosas\PROGRAMACION\PROGRAMACION II\Trabajo Programacion\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\API_Tecnicaturas_UTN.deps.json
+D:\Mis cosas\PROGRAMACION\PROGRAMACION II\Trabajo Programacion\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\API_Tecnicaturas_UTN.runtimeconfig.json
+D:\Mis cosas\PROGRAMACION\PROGRAMACION II\Trabajo Programacion\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\API_Tecnicaturas_UTN.dll
+D:\Mis cosas\PROGRAMACION\PROGRAMACION II\Trabajo Programacion\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\API_Tecnicaturas_UTN.pdb
+D:\Mis cosas\PROGRAMACION\PROGRAMACION II\Trabajo Programacion\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\Microsoft.OpenApi.dll
+D:\Mis cosas\PROGRAMACION\PROGRAMACION II\Trabajo Programacion\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Mis cosas\PROGRAMACION\PROGRAMACION II\Trabajo Programacion\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Mis cosas\PROGRAMACION\PROGRAMACION II\Trabajo Programacion\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Mis cosas\PROGRAMACION\PROGRAMACION II\Trabajo Programacion\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\System.Data.SqlClient.dll
+D:\Mis cosas\PROGRAMACION\PROGRAMACION II\Trabajo Programacion\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+D:\Mis cosas\PROGRAMACION\PROGRAMACION II\Trabajo Programacion\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+D:\Mis cosas\PROGRAMACION\PROGRAMACION II\Trabajo Programacion\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+D:\Mis cosas\PROGRAMACION\PROGRAMACION II\Trabajo Programacion\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Mis cosas\PROGRAMACION\PROGRAMACION II\Trabajo Programacion\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Mis cosas\PROGRAMACION\PROGRAMACION II\Trabajo Programacion\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\DLL_API.dll
+D:\Mis cosas\PROGRAMACION\PROGRAMACION II\Trabajo Programacion\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\DLL_API.pdb
+D:\Mis cosas\PROGRAMACION\PROGRAMACION II\Trabajo Programacion\API\API_Tecnicaturas_UTN\obj\Debug\net6.0\API_Tecnicaturas_UTN.csproj.AssemblyReference.cache
+D:\Mis cosas\PROGRAMACION\PROGRAMACION II\Trabajo Programacion\API\API_Tecnicaturas_UTN\obj\Debug\net6.0\API_Tecnicaturas_UTN.GeneratedMSBuildEditorConfig.editorconfig
+D:\Mis cosas\PROGRAMACION\PROGRAMACION II\Trabajo Programacion\API\API_Tecnicaturas_UTN\obj\Debug\net6.0\API_Tecnicaturas_UTN.AssemblyInfoInputs.cache
+D:\Mis cosas\PROGRAMACION\PROGRAMACION II\Trabajo Programacion\API\API_Tecnicaturas_UTN\obj\Debug\net6.0\API_Tecnicaturas_UTN.AssemblyInfo.cs
+D:\Mis cosas\PROGRAMACION\PROGRAMACION II\Trabajo Programacion\API\API_Tecnicaturas_UTN\obj\Debug\net6.0\API_Tecnicaturas_UTN.csproj.CoreCompileInputs.cache
+D:\Mis cosas\PROGRAMACION\PROGRAMACION II\Trabajo Programacion\API\API_Tecnicaturas_UTN\obj\Debug\net6.0\API_Tecnicaturas_UTN.MvcApplicationPartsAssemblyInfo.cs
+D:\Mis cosas\PROGRAMACION\PROGRAMACION II\Trabajo Programacion\API\API_Tecnicaturas_UTN\obj\Debug\net6.0\API_Tecnicaturas_UTN.MvcApplicationPartsAssemblyInfo.cache
+D:\Mis cosas\PROGRAMACION\PROGRAMACION II\Trabajo Programacion\API\API_Tecnicaturas_UTN\obj\Debug\net6.0\staticwebassets.build.json
+D:\Mis cosas\PROGRAMACION\PROGRAMACION II\Trabajo Programacion\API\API_Tecnicaturas_UTN\obj\Debug\net6.0\staticwebassets.development.json
+D:\Mis cosas\PROGRAMACION\PROGRAMACION II\Trabajo Programacion\API\API_Tecnicaturas_UTN\obj\Debug\net6.0\scopedcss\bundle\API_Tecnicaturas_UTN.styles.css
+D:\Mis cosas\PROGRAMACION\PROGRAMACION II\Trabajo Programacion\API\API_Tecnicaturas_UTN\obj\Debug\net6.0\API_Tecnicaturas_UTN.csproj.CopyComplete
+D:\Mis cosas\PROGRAMACION\PROGRAMACION II\Trabajo Programacion\API\API_Tecnicaturas_UTN\obj\Debug\net6.0\API_Tecnicaturas_UTN.dll
+D:\Mis cosas\PROGRAMACION\PROGRAMACION II\Trabajo Programacion\API\API_Tecnicaturas_UTN\obj\Debug\net6.0\refint\API_Tecnicaturas_UTN.dll
+D:\Mis cosas\PROGRAMACION\PROGRAMACION II\Trabajo Programacion\API\API_Tecnicaturas_UTN\obj\Debug\net6.0\API_Tecnicaturas_UTN.pdb
+D:\Mis cosas\PROGRAMACION\PROGRAMACION II\Trabajo Programacion\API\API_Tecnicaturas_UTN\obj\Debug\net6.0\API_Tecnicaturas_UTN.genruntimeconfig.cache
+D:\Mis cosas\PROGRAMACION\PROGRAMACION II\Trabajo Programacion\API\API_Tecnicaturas_UTN\obj\Debug\net6.0\ref\API_Tecnicaturas_UTN.dll
+C:\Users\Tomi\Downloads\Trabajo Programacion\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\Tomi\Downloads\Trabajo Programacion\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\appsettings.json
+C:\Users\Tomi\Downloads\Trabajo Programacion\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\API_Tecnicaturas_UTN.exe
+C:\Users\Tomi\Downloads\Trabajo Programacion\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\API_Tecnicaturas_UTN.deps.json
+C:\Users\Tomi\Downloads\Trabajo Programacion\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\API_Tecnicaturas_UTN.runtimeconfig.json
+C:\Users\Tomi\Downloads\Trabajo Programacion\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\API_Tecnicaturas_UTN.dll
+C:\Users\Tomi\Downloads\Trabajo Programacion\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\API_Tecnicaturas_UTN.pdb
+C:\Users\Tomi\Downloads\Trabajo Programacion\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\Tomi\Downloads\Trabajo Programacion\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Tomi\Downloads\Trabajo Programacion\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Tomi\Downloads\Trabajo Programacion\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Tomi\Downloads\Trabajo Programacion\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\System.Data.SqlClient.dll
+C:\Users\Tomi\Downloads\Trabajo Programacion\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+C:\Users\Tomi\Downloads\Trabajo Programacion\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+C:\Users\Tomi\Downloads\Trabajo Programacion\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+C:\Users\Tomi\Downloads\Trabajo Programacion\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Tomi\Downloads\Trabajo Programacion\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Tomi\Downloads\Trabajo Programacion\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\DLL_API.dll
+C:\Users\Tomi\Downloads\Trabajo Programacion\API\API_Tecnicaturas_UTN\bin\Debug\net6.0\DLL_API.pdb
+C:\Users\Tomi\Downloads\Trabajo Programacion\API\API_Tecnicaturas_UTN\obj\Debug\net6.0\API_Tecnicaturas_UTN.csproj.AssemblyReference.cache
+C:\Users\Tomi\Downloads\Trabajo Programacion\API\API_Tecnicaturas_UTN\obj\Debug\net6.0\API_Tecnicaturas_UTN.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tomi\Downloads\Trabajo Programacion\API\API_Tecnicaturas_UTN\obj\Debug\net6.0\API_Tecnicaturas_UTN.AssemblyInfoInputs.cache
+C:\Users\Tomi\Downloads\Trabajo Programacion\API\API_Tecnicaturas_UTN\obj\Debug\net6.0\API_Tecnicaturas_UTN.AssemblyInfo.cs
+C:\Users\Tomi\Downloads\Trabajo Programacion\API\API_Tecnicaturas_UTN\obj\Debug\net6.0\API_Tecnicaturas_UTN.csproj.CoreCompileInputs.cache
+C:\Users\Tomi\Downloads\Trabajo Programacion\API\API_Tecnicaturas_UTN\obj\Debug\net6.0\API_Tecnicaturas_UTN.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Tomi\Downloads\Trabajo Programacion\API\API_Tecnicaturas_UTN\obj\Debug\net6.0\API_Tecnicaturas_UTN.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Tomi\Downloads\Trabajo Programacion\API\API_Tecnicaturas_UTN\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\Tomi\Downloads\Trabajo Programacion\API\API_Tecnicaturas_UTN\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\Tomi\Downloads\Trabajo Programacion\API\API_Tecnicaturas_UTN\obj\Debug\net6.0\scopedcss\bundle\API_Tecnicaturas_UTN.styles.css
+C:\Users\Tomi\Downloads\Trabajo Programacion\API\API_Tecnicaturas_UTN\obj\Debug\net6.0\API_Tecnicaturas_UTN.csproj.CopyComplete
+C:\Users\Tomi\Downloads\Trabajo Programacion\API\API_Tecnicaturas_UTN\obj\Debug\net6.0\API_Tecnicaturas_UTN.dll
+C:\Users\Tomi\Downloads\Trabajo Programacion\API\API_Tecnicaturas_UTN\obj\Debug\net6.0\refint\API_Tecnicaturas_UTN.dll
+C:\Users\Tomi\Downloads\Trabajo Programacion\API\API_Tecnicaturas_UTN\obj\Debug\net6.0\API_Tecnicaturas_UTN.pdb
+C:\Users\Tomi\Downloads\Trabajo Programacion\API\API_Tecnicaturas_UTN\obj\Debug\net6.0\API_Tecnicaturas_UTN.genruntimeconfig.cache
+C:\Users\Tomi\Downloads\Trabajo Programacion\API\API_Tecnicaturas_UTN\obj\Debug\net6.0\ref\API_Tecnicaturas_UTN.dll
