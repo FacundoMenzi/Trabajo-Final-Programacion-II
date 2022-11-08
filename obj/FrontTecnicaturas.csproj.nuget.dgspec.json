@@ -1,0 +1,224 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Tomi\\Downloads\\Trabajo Programacion\\API\\FrontTecnicaturas\\FrontTecnicaturas.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Tomi\\Downloads\\Trabajo Programacion\\API\\DLL_API\\DLL_API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Tomi\\Downloads\\Trabajo Programacion\\API\\DLL_API\\DLL_API.csproj",
+        "projectName": "DLL_API",
+        "projectPath": "C:\\Users\\Tomi\\Downloads\\Trabajo Programacion\\API\\DLL_API\\DLL_API.csproj",
+        "packagesPath": "C:\\Users\\Tomi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Tomi\\Downloads\\Trabajo Programacion\\API\\DLL_API\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Tomi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Tomi\\Downloads\\Trabajo Programacion\\API\\FrontTecnicaturas\\FrontTecnicaturas.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Tomi\\Downloads\\Trabajo Programacion\\API\\FrontTecnicaturas\\FrontTecnicaturas.csproj",
+        "projectName": "FrontTecnicaturas",
+        "projectPath": "C:\\Users\\Tomi\\Downloads\\Trabajo Programacion\\API\\FrontTecnicaturas\\FrontTecnicaturas.csproj",
+        "packagesPath": "C:\\Users\\Tomi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Tomi\\Downloads\\Trabajo Programacion\\API\\FrontTecnicaturas\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Tomi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0-windows7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0-windows7.0": {
+            "targetAlias": "net6.0-windows",
+            "projectReferences": {
+              "C:\\Users\\Tomi\\Downloads\\Trabajo Programacion\\API\\DLL_API\\DLL_API.csproj": {
+                "projectPath": "C:\\Users\\Tomi\\Downloads\\Trabajo Programacion\\API\\DLL_API\\DLL_API.csproj"
+              },
+              "C:\\Users\\Tomi\\Downloads\\Trabajo Programacion\\API\\WinFormReport\\WinFormReport\\WinFormReport.csproj": {
+                "projectPath": "C:\\Users\\Tomi\\Downloads\\Trabajo Programacion\\API\\WinFormReport\\WinFormReport\\WinFormReport.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WindowsForms": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Tomi\\Downloads\\Trabajo Programacion\\API\\WinFormReport\\WinFormReport\\WinFormReport.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Tomi\\Downloads\\Trabajo Programacion\\API\\WinFormReport\\WinFormReport\\WinFormReport.csproj",
+        "projectName": "WinFormReport",
+        "projectPath": "C:\\Users\\Tomi\\Downloads\\Trabajo Programacion\\API\\WinFormReport\\WinFormReport\\WinFormReport.csproj",
+        "packagesPath": "C:\\Users\\Tomi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Tomi\\Downloads\\Trabajo Programacion\\API\\WinFormReport\\WinFormReport\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Tomi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0-windows7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0-windows7.0": {
+            "targetAlias": "net6.0-windows",
+            "projectReferences": {
+              "C:\\Users\\Tomi\\Downloads\\Trabajo Programacion\\API\\WinFormReport\\WinNetFramework\\WinNetFramework.csproj": {
+                "projectPath": "C:\\Users\\Tomi\\Downloads\\Trabajo Programacion\\API\\WinFormReport\\WinNetFramework\\WinNetFramework.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
+          "dependencies": {
+            "ReportViewerCore.WinForms": {
+              "target": "Package",
+              "version": "[15.1.17, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WindowsForms": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Tomi\\Downloads\\Trabajo Programacion\\API\\WinFormReport\\WinNetFramework\\WinNetFramework.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Tomi\\Downloads\\Trabajo Programacion\\API\\WinFormReport\\WinNetFramework\\WinNetFramework.csproj",
+        "projectName": "WinNetFramework",
+        "projectPath": "C:\\Users\\Tomi\\Downloads\\Trabajo Programacion\\API\\WinFormReport\\WinNetFramework\\WinNetFramework.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    }
+  }
+}
