@@ -1,0 +1,36 @@
+C:\Users\Tomi\Desktop\API\DLL_API\bin\Debug\net6.0\DLL_API.deps.json
+C:\Users\Tomi\Desktop\API\DLL_API\bin\Debug\net6.0\DLL_API.dll
+C:\Users\Tomi\Desktop\API\DLL_API\bin\Debug\net6.0\DLL_API.pdb
+C:\Users\Tomi\Desktop\API\DLL_API\obj\Debug\net6.0\DLL_API.csproj.AssemblyReference.cache
+C:\Users\Tomi\Desktop\API\DLL_API\obj\Debug\net6.0\DLL_API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tomi\Desktop\API\DLL_API\obj\Debug\net6.0\DLL_API.AssemblyInfoInputs.cache
+C:\Users\Tomi\Desktop\API\DLL_API\obj\Debug\net6.0\DLL_API.AssemblyInfo.cs
+C:\Users\Tomi\Desktop\API\DLL_API\obj\Debug\net6.0\DLL_API.csproj.CoreCompileInputs.cache
+C:\Users\Tomi\Desktop\API\DLL_API\obj\Debug\net6.0\DLL_API.dll
+C:\Users\Tomi\Desktop\API\DLL_API\obj\Debug\net6.0\refint\DLL_API.dll
+C:\Users\Tomi\Desktop\API\DLL_API\obj\Debug\net6.0\DLL_API.pdb
+C:\Users\Tomi\Desktop\API\DLL_API\obj\Debug\net6.0\ref\DLL_API.dll
+D:\Mis cosas\PROGRAMACION\PROGRAMACION II\Trabajo Programacion\API\DLL_API\bin\Debug\net6.0\DLL_API.deps.json
+D:\Mis cosas\PROGRAMACION\PROGRAMACION II\Trabajo Programacion\API\DLL_API\bin\Debug\net6.0\DLL_API.dll
+D:\Mis cosas\PROGRAMACION\PROGRAMACION II\Trabajo Programacion\API\DLL_API\bin\Debug\net6.0\DLL_API.pdb
+D:\Mis cosas\PROGRAMACION\PROGRAMACION II\Trabajo Programacion\API\DLL_API\obj\Debug\net6.0\DLL_API.csproj.AssemblyReference.cache
+D:\Mis cosas\PROGRAMACION\PROGRAMACION II\Trabajo Programacion\API\DLL_API\obj\Debug\net6.0\DLL_API.GeneratedMSBuildEditorConfig.editorconfig
+D:\Mis cosas\PROGRAMACION\PROGRAMACION II\Trabajo Programacion\API\DLL_API\obj\Debug\net6.0\DLL_API.AssemblyInfoInputs.cache
+D:\Mis cosas\PROGRAMACION\PROGRAMACION II\Trabajo Programacion\API\DLL_API\obj\Debug\net6.0\DLL_API.AssemblyInfo.cs
+D:\Mis cosas\PROGRAMACION\PROGRAMACION II\Trabajo Programacion\API\DLL_API\obj\Debug\net6.0\DLL_API.csproj.CoreCompileInputs.cache
+D:\Mis cosas\PROGRAMACION\PROGRAMACION II\Trabajo Programacion\API\DLL_API\obj\Debug\net6.0\DLL_API.dll
+D:\Mis cosas\PROGRAMACION\PROGRAMACION II\Trabajo Programacion\API\DLL_API\obj\Debug\net6.0\refint\DLL_API.dll
+D:\Mis cosas\PROGRAMACION\PROGRAMACION II\Trabajo Programacion\API\DLL_API\obj\Debug\net6.0\DLL_API.pdb
+D:\Mis cosas\PROGRAMACION\PROGRAMACION II\Trabajo Programacion\API\DLL_API\obj\Debug\net6.0\ref\DLL_API.dll
+C:\Users\Tomi\Downloads\Trabajo Programacion\API\DLL_API\bin\Debug\net6.0\DLL_API.deps.json
+C:\Users\Tomi\Downloads\Trabajo Programacion\API\DLL_API\bin\Debug\net6.0\DLL_API.dll
+C:\Users\Tomi\Downloads\Trabajo Programacion\API\DLL_API\bin\Debug\net6.0\DLL_API.pdb
+C:\Users\Tomi\Downloads\Trabajo Programacion\API\DLL_API\obj\Debug\net6.0\DLL_API.csproj.AssemblyReference.cache
+C:\Users\Tomi\Downloads\Trabajo Programacion\API\DLL_API\obj\Debug\net6.0\DLL_API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tomi\Downloads\Trabajo Programacion\API\DLL_API\obj\Debug\net6.0\DLL_API.AssemblyInfoInputs.cache
+C:\Users\Tomi\Downloads\Trabajo Programacion\API\DLL_API\obj\Debug\net6.0\DLL_API.AssemblyInfo.cs
+C:\Users\Tomi\Downloads\Trabajo Programacion\API\DLL_API\obj\Debug\net6.0\DLL_API.csproj.CoreCompileInputs.cache
+C:\Users\Tomi\Downloads\Trabajo Programacion\API\DLL_API\obj\Debug\net6.0\DLL_API.dll
+C:\Users\Tomi\Downloads\Trabajo Programacion\API\DLL_API\obj\Debug\net6.0\refint\DLL_API.dll
+C:\Users\Tomi\Downloads\Trabajo Programacion\API\DLL_API\obj\Debug\net6.0\DLL_API.pdb
+C:\Users\Tomi\Downloads\Trabajo Programacion\API\DLL_API\obj\Debug\net6.0\ref\DLL_API.dll
