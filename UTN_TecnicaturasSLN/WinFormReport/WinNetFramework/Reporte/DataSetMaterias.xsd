@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetMaterias" targetNamespace="http://tempuri.org/DataSetMaterias.xsd" xmlns:mstns="http://tempuri.org/DataSetMaterias.xsd" xmlns="http://tempuri.org/DataSetMaterias.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetMaterias" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DataSetMaterias" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetMaterias">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Materias" msprop:Generator_RowEvHandlerName="MateriasRowChangeEventHandler" msprop:Generator_RowDeletedName="MateriasRowDeleted" msprop:Generator_RowDeletingName="MateriasRowDeleting" msprop:Generator_RowEvArgName="MateriasRowChangeEvent" msprop:Generator_TablePropName="Materias" msprop:Generator_RowChangedName="MateriasRowChanged" msprop:Generator_UserTableName="Materias" msprop:Generator_RowChangingName="MateriasRowChanging" msprop:Generator_RowClassName="MateriasRow" msprop:Generator_TableClassName="MateriasDataTable" msprop:Generator_TableVarName="tableMaterias">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Materia" msprop:Generator_ColumnPropNameInTable="MateriaColumn" msprop:Generator_ColumnPropNameInRow="Materia" msprop:Generator_UserColumnName="Materia" msprop:Generator_ColumnVarNameInTable="columnMateria" type="xs:string" minOccurs="0" />
+              <xs:element name="Profesor" msprop:Generator_ColumnPropNameInTable="ProfesorColumn" msprop:Generator_ColumnPropNameInRow="Profesor" msprop:Generator_UserColumnName="Profesor" msprop:Generator_ColumnVarNameInTable="columnProfesor" type="xs:string" minOccurs="0" />
+              <xs:element name="Turno" msprop:Generator_ColumnPropNameInTable="TurnoColumn" msprop:Generator_ColumnPropNameInRow="Turno" msprop:Generator_UserColumnName="Turno" msprop:Generator_ColumnVarNameInTable="columnTurno" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Alumnos" msprop:Generator_RowEvHandlerName="AlumnosRowChangeEventHandler" msprop:Generator_RowDeletedName="AlumnosRowDeleted" msprop:Generator_RowDeletingName="AlumnosRowDeleting" msprop:Generator_RowEvArgName="AlumnosRowChangeEvent" msprop:Generator_TablePropName="Alumnos" msprop:Generator_RowChangedName="AlumnosRowChanged" msprop:Generator_UserTableName="Alumnos" msprop:Generator_RowChangingName="AlumnosRowChanging" msprop:Generator_RowClassName="AlumnosRow" msprop:Generator_TableClassName="AlumnosDataTable" msprop:Generator_TableVarName="tableAlumnos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Legajo" msprop:Generator_ColumnPropNameInTable="LegajoColumn" msprop:Generator_ColumnPropNameInRow="Legajo" msprop:Generator_UserColumnName="Legajo" msprop:Generator_ColumnVarNameInTable="columnLegajo" type="xs:string" minOccurs="0" />
+              <xs:element name="Alumno" msprop:Generator_ColumnPropNameInTable="AlumnoColumn" msprop:Generator_ColumnPropNameInRow="Alumno" msprop:Generator_UserColumnName="Alumno" msprop:Generator_ColumnVarNameInTable="columnAlumno" type="xs:string" minOccurs="0" />
+              <xs:element name="Promedio" msprop:Generator_ColumnPropNameInTable="PromedioColumn" msprop:Generator_ColumnPropNameInRow="Promedio" msprop:Generator_UserColumnName="Promedio" msprop:Generator_ColumnVarNameInTable="columnPromedio" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
