@@ -930,7 +930,7 @@ order by 'Promedio' desc,'Legajo'
 
 create proc [dbo].[SP_REPORTE_MATERIAS]
 AS
-select m.nombre Materia , UPPER(pe.apellido)+','+pe.nombre as Profesor , t.turno
+select distinct m.nombre Materia , UPPER(pe.apellido)+','+pe.nombre as Profesor , t.turno
 from Materias m join Profesores p on m.id_profesor=p.id_profesor
 join Turnos t on m.id_turno=t.id_turno
 join Personas pe on pe.id_persona=p.id_persona
