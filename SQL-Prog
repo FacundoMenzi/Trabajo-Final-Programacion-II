@@ -937,3 +937,19 @@ join Personas pe on pe.id_persona=p.id_persona
 join Materias_Alumnos mt on mt.id_materia=m.id_materia
 where estado=1
 order by Materia,t.turno
+
+--update nombres
+update personas set nombre='Miguel' where id_persona=17
+update personas set apellido='Gonzalez' where id_persona=17
+
+update personas set nombre='Juan' where id_persona=18
+update personas set apellido='Rodriguez' where id_persona=18
+
+update personas set nombre='Carlos' where id_persona=19
+update personas set apellido='Gomez' where id_persona=19
+
+update personas set nombre='Lucia' where id_persona=25
+update personas set apellido='Sanchez' where id_persona=25
+
+update personas set nombre='Catalina' where id_persona=27
+update personas set apellido='Recio' where id_persona=27
