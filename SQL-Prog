@@ -934,7 +934,7 @@ select distinct m.nombre Materia , UPPER(pe.apellido)+','+pe.nombre as Profesor 
 from Materias m join Profesores p on m.id_profesor=p.id_profesor
 join Turnos t on m.id_turno=t.id_turno
 join Personas pe on pe.id_persona=p.id_persona
-join Materias_Alumnos mt on mt.id_materia=m.id_materia
+left join Materias_Alumnos mt on mt.id_materia=m.id_materia
 where estado=1
 order by Materia,t.turno
 
