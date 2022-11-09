@@ -759,7 +759,11 @@ insert into Detalle_Examenes values(81,114120, 10)
 insert into Detalle_Examenes values(82,114120, 7)
 insert into Detalle_Examenes values(83,114120, 9)
 insert into Detalle_Examenes values(84,114120, 7)
-
+---
+insert into Detalle_Examenes values(2,114111,2)
+insert into Detalle_Examenes values (4,114113,3)
+insert into Detalle_Examenes values (4,114125,5)
+insert into Detalle_Examenes values (4,114129,10)
 
 ------------AGREGAR ESTADO-----------------------
 
@@ -912,7 +916,7 @@ Materias m on m.id_materia=e.id_materia
 where p.apellido like @apellido+'%'
 group by a.legajo, p.apellido+', '+p.nombre
 having avg(de.nota) > @promedio
-order by 'Promedio','Legajo'
+order by 'Promedio' desc,'Legajo'
 end 
 else
 select  a.legajo 'Legajo', p.apellido+', '+p.nombre 'Alumno', avg(de.nota) 'Promedio'
@@ -922,7 +926,7 @@ join Examenes e on e.id_examen=de.id_examen join
 Materias m on m.id_materia=e.id_materia
 where p.apellido like @apellido+'%'
 group by a.legajo, p.apellido+', '+p.nombre
-order by 'Promedio','Legajo'
+order by 'Promedio' desc,'Legajo'
 
 create proc [dbo].[SP_REPORTE_MATERIAS]
 AS
